@@ -17,6 +17,10 @@ class SimpleQueue():
     def push(self , data):
         if self._tail >= self._queueSize:
             self._tail = 0
+        if self._tail == self._head:
+            self._head = self._head + 1
+            if self._head >= self._queueSize:
+                self._head = 0
         self._datas[self._tail] = data
         self._tail = self._tail + 1
         self._size = self._size + 1
@@ -58,9 +62,10 @@ testQueue.push(4)
 testQueue.push(5)
 assert(testQueue.isFull())
 testQueue.push(6)
+assert(testQueue.getFront() == 2)
 assert(testQueue.isFull())
 testQueue.pop()
-assert(testQueue.getFront() == 2)
+assert(testQueue.getFront() == 3)
 assert(testQueue.getBack() == 6)
 testQueue.pop()
 testQueue.pop()
