@@ -1,0 +1,464 @@
+Windows PowerShell
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+PS C:\Users\skyline\Documents\GitHub\dylan_code> cd .\python_feature\generater\
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> fabonacci.py
+fabonacci.py : 无法将“fabonacci.py”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称
+的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ fabonacci.py
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (fabonacci.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: 找不到命令 fabonacci.py，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入“.\fabonacci.py”。有关详细信息，请参阅 "ge
+t-help about_Command_Precedence"。
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+0
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+  File "fabonacci.py", line 42
+    for x in fab2(5)
+                   ^
+SyntaxError: invalid syntax
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+5
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+5
+fab4:
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
++++++++++++++++++
+1
++++++++++++++++++
+1
++++++++++++++++++
+2
++++++++++++++++++
+3
++++++++++++++++++
+5
++++++++++++++++++
+fab4:
+-------------
+1
+1
+2
+3
+Windows PowerShell
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+PS C:\Users\skyline\Documents\GitHub\dylan_code> cd .\python_feature\generater\
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> fabonacci.py
+fabonacci.py : 无法将“fabonacci.py”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称
+的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ fabonacci.py
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (fabonacci.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: 找不到命令 fabonacci.py，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入“.\fabonacci.py”。有关详细信息，请参阅 "ge
+t-help about_Command_Precedence"。
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+0
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+  File "fabonacci.py", line 42
+    for x in fab2(5)
+                   ^
+SyntaxError: invalid syntax
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+5
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
+1
+1
+2
+3
+5
+fab4:
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+fab3:
++++++++++++++++++
+1
++++++++++++++++++
+1
++++++++++++++++++
+2
++++++++++++++++++
+3
++++++++++++++++++
+5
++++++++++++++++++
+fab4:
+-------------
+1
+1
+2
+3
+Windows PowerShell
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+PS C:\Users\skyline\Documents\GitHub\dylan_code> cd .\python_feature\generater\
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> fabonacci.py
+fabonacci.py : 无法将“fabonacci.py”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称
+的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ fabonacci.py
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (fabonacci.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: 找不到命令 fabonacci.py，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入“.\fabonacci.py”。有关详细信息，请参阅 "ge
+t-help about_Command_Precedence"。
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> .\fabonacci.py
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+0
+1
+1
+2
+3
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python fabonacci.py
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+  File "fabonacci.py", line 42
+    for x in fab2(5)
+                   ^
+SyntaxError: invalid syntax
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+5
+fab2:
+[1, 1, 2, 3, 5]
+1
+1
+2
+3
+5
+PS C:\Users\skyline\Documents\GitHub\dylan_code\python_feature\generater> python  fabonacci.py
+fab1:
+1
+1
+2
+3
+
