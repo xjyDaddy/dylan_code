@@ -3,7 +3,7 @@
 #Desc:a simple queue demo
 
 class SimpleQueue():
-    def __init__(self , queueSize):
+    def __init__(self , queueSize = 10):
         self._datas = [1]*queueSize
         self._head = 0
         self._tail = 0
