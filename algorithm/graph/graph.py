@@ -10,15 +10,13 @@ class Graph(dict):
             self.add_vertex(v)
         for e in es:
             self.add_edge(e)
+        self.add_all_edges()
     def add_vertex(self , v):
         self[v] = {}
     def add_edge(self , e):
-        ''' add edge to the graph by adding an entry in both directions
-        If there is already an edge connecting these Vertices , the new edge replaces
-        it ''' 
-        v , w  = e
+        v = e.getFrom()
+        w = e.getTo()
         self[v][w] = e
-        self[w][v] = e
     def get_edge(self, v ,w):
         if v in self:
             if w in self[v]:
@@ -28,7 +26,6 @@ class Graph(dict):
         e = self.get_edge(v ,w)
         if e:
             del self[v][w]
-            del self[w][v]
     def vertexs(self):
         return self.keys()
     def edges(self):
@@ -47,31 +44,45 @@ class Graph(dict):
         edges = []
         if v in self:
             for _ ,e in self[v].items():
-                edges.append(w)
+                edges.append(e)
         return edges
     def add_all_edges(self):
         '''make a edgeless graph to a complete graph'''
         for v1 in self:
-            print(v1)
             for v2 in self:
-                print(v1 ,v2)
-                if (v1 is not v2) and (v2 not in self[v1]):
-                    self.add_edge(Edge(v1 ,v2))
-    
-
+                if v1 is v2:
+                    self.add_edge(Edge(v1 , v1 , 0))
+                elif v2 not in self[v1]:
+                    self.add_edge(Edge(v1 ,v2 , 999999))
+    def formatPrint(self):
+        for k , v in self.items():
+            t = sorted(v.items())
+            print(k ,t)
 class Vertex(object):
     def __init__(self , lable):
         self.label = lable
     def __repr__(self):
-        return 'Vertex(%s)' % repr(self.label)
+        return '%s' % repr(self.label)
     __str__ = __repr__
+    def __lt__(self ,other):
+        return self.label < other.label
 
-class Edge(tuple):
-    def __new__(cls , e1 , e2):
-        return tuple.__new__(cls , (e1 ,e2))
+class Edge(object):
+    def __init__(self , e1 , e2 , weight = 999999):
+        self._vt = (e1 , e2)
+        self._weight = weight
     def __repr__(self):
-        return 'Edge(%s , %s)'% (repr(self[0]) , repr(self[1]))
-    
+        return '%s-%s:%d'% (repr(self._vt[0]) , repr(self._vt[1]) , self._weight)
+    def getFrom(self):
+        return self._vt[0]
+    def getTo(self):
+        return self._vt[1]
+    def getWeight(self):
+        return self._weight
+    def setWeight(self ,weight):
+        self._weight = weight
+
+'''
 v = Vertex('v')
 w = Vertex('w')
 e = Edge(v ,w)
@@ -90,3 +101,5 @@ print('-----------------------add_all_edges-----------------')
 graph.add_vertex(Vertex('q'))
 graph.add_all_edges()
 print(graph)
+
+'''
