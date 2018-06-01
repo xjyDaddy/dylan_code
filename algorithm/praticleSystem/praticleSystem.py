@@ -14,11 +14,11 @@ import Config
 class PariticleSystem():
     param = {
         #Where praticle spawn from
-        'pos' : Vec2(Config.screenSize[0]/2 ,Config.screenSize[1]/2) , 
+        'pos' : Vec2(Config.screenSize[0]/2 ,Config.screenSize[1]/4) , 
         #How many pariticles spawn every second
-        'praticlePerSecond': 5,
+        'praticlePerSecond': 100,
         #How long each pariticle lives(and how much this can vary)
-        'pariticleLife': 2,
+        'pariticleLife': 0.5,
         'lifeVariation': 0.52,
         #The gradient of colors the particle will travel through
         'colorFrom': Color4b(255, 0, 255, 255),
@@ -28,8 +28,8 @@ class PariticleSystem():
         'angleVariation': math.pi * 2,
  
         #The velocity range the particle will fire off at
-        'minVelocity' : 50,
-        'maxVelocity' : 100,
+        'minVelocity' : 30,
+        'maxVelocity' : 50,
  
         #The gravity vector applied to each particle
         'gravity': Vec2(0, 30.8),
@@ -46,7 +46,7 @@ class PariticleSystem():
                 self.param[k] = param[k]
         self.pariticles = []
         self.quterTree = QuarterTree(Rect2(0 , 0 , Config.screenSize[0] , Config.screenSize[1]),1)
-        self.randomColliders()
+        #self.randomColliders()
         self.quterTree.insert(self.param['colliders'])
     def update(self , dt):
         self.step(dt)
@@ -74,14 +74,14 @@ class PariticleSystem():
     def draw(self , render):
         for pariticle in self.pariticles:
             pariticle.draw(render)
-        if self.param['colliders']:
-            for collider in self.param['colliders']:
-                collider.draw(render)
-        if(self.quterTree):
-            self.quterTree.draw(render)
+        #if self.param['colliders']:
+        #    for collider in self.param['colliders']:
+        #        collider.draw(render)
+        #if(self.quterTree):
+        #    self.quterTree.draw(render)
 
     def randomVec(self):
         return Vec2(random.random()*Config.screenSize[0] ,random.random()*Config.screenSize[1])
-    def randomColliders(self):
+    #def randomColliders(self):
         for i in range(100):
             self.param['colliders'].append(Segment(self.randomVec() , self.randomVec()))

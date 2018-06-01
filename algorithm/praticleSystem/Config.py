@@ -2,7 +2,7 @@
 #Author:dylan_xi
 #Desc:config
 
-screenSize = (960 , 600)
+screenSize = (300 , 300)
 
 
 collisionDetectTimes = 0

@@ -20,7 +20,7 @@ class Mywin(wx.Frame):
         self.Show(True)
         self.timer.Start(self.DELAT_TIME)
         self.fpsLabel = wx.StaticText(self, wx.NewId(), self.getFPSText(), (10 ,Config.screenSize[1]-70))
-        self.CollisionDetectNumLabel = wx.StaticText(self, wx.NewId(), self.getCollisionDetectNum()  , (10 ,Config.screenSize[1]-100)) 
+        #self.CollisionDetectNumLabel = wx.StaticText(self, wx.NewId(), self.getCollisionDetectNum()  , (10 ,Config.screenSize[1]-100)) 
     #解决擦除背景闪烁的问题
     def OnErase(self ,event):
         pass
@@ -40,7 +40,7 @@ class Mywin(wx.Frame):
             dt = event.GetInterval()/ 1000.0
             self.ps.update(dt)
             self.Refresh()
-            self.CollisionDetectNumLabel.SetLabelText(self.getCollisionDetectNum())
+            ##self.CollisionDetectNumLabel.SetLabelText(self.getCollisionDetectNum())
 ex = wx.App() 
 Mywin(None,'Drawing Demo - dylan_xi') 
 ex.MainLoop()
